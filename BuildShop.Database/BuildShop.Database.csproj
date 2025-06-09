@@ -23,4 +23,8 @@
       <ProjectReference Include="..\BuildShop.Model\BuildShop.Model.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Migrations\" />
+    </ItemGroup>
+
 </Project>

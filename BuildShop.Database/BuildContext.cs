@@ -11,6 +11,7 @@ public class BuildContext : DbContext
     public DbSet<Order> Orders { get; set; }
     public DbSet<Delivery> Deliveries { get; set; }
     public DbSet<RecordOfProduct> RecordOfProducts { get; set; }
+    public DbSet<Category> Categories { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

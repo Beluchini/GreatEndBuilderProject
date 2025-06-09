@@ -8,4 +8,8 @@ public class Product
     public string Title { get; set; }
     public int Count { get; set; }
     public decimal Price { get; set; }
+    
+    public int Basket { get; set; }
+    public string Style { get; set; }
+    public string Kind { get; set; }
 }

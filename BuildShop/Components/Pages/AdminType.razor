@@ -1,0 +1,24 @@
+@page "/AdminType"
+@using BuildShop.Database
+@using BuildShop.Model
+@rendermode InteractiveServer
+@inject BuildContext ef
+<h3>AdminType</h3>
+
+<EditForm FormName="formAddItem" Model="_category" OnValidSubmit="@Addmit">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <p>Введите категорию товара</p>
+    <input type="text" @bind="_category.Type"/>
+    <button type="submit">Добавить категорию</button>
+</EditForm>
+
+@code {
+    private Category _category = new Category();
+
+    private void Addmit(EditContext arg)
+    {
+        ef.Add(_category);
+        ef.SaveChanges();
+        _category = new Category();
+    }
+}

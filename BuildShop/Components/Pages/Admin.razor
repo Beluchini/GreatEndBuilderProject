@@ -4,45 +4,33 @@
 @rendermode InteractiveServer
 @inject BuildContext ef
 
-<EditForm FormName="formAddItem" Model="_client" OnValidSubmit="@Submit">
+<EditForm FormName="formAddItem" Model="_product" OnValidSubmit="@Submit">
     <DataAnnotationsValidator></DataAnnotationsValidator>
-    <p>Введите имя пользователя</p>
-    <input type="text" @bind="_client.NickName"/>
-    <p>Введите почту клиентак</p>
-    <input type="text" @bind="_client.Email"/>
     <p>Введите называние товара</p>
     <input type="text" @bind="_product.Title"/>
     <p>Введите количество товара</p>
     <input type="text" @bind="_product.Count"/>
     <p>Введите цену товара</p>
     <input type="text" @bind="_product.Price"/>
-    <p>Введите адрес доставки</p>
-    <input type="text" @bind="_order.Addres"/>
-    <p>Введите город доставки</p>
-    <input type="text" @bind="_order.City"/>
-    <p>Введите страну долставки</p>
-    <input type="text" @bind="_order.Country"/>
-    <p>Введите дату доставки</p>
-    <input type="text" @bind="_delivery.DayOfOrder"/>
-    <button type="submit">Добавить игру</button>
+    <p>Введите ссылку на изображение товара</p>
+    <input type="text" @bind="_product.Style"/>
+    <p>Определите тип товара</p>
+    <select>
+        @foreach (var item in ef.Categories.ToList())
+        {
+            <option>@item.Type</option>
+        }
+    </select>
+    <button type="submit">Добавить продукт</button>
 </EditForm>
 
 @code {
-    private Client _client = new Client();
     private Product _product = new Product();
-    private Order _order = new Order();
-    private Delivery _delivery = new Delivery();
 
     private void Submit(EditContext arg)
     {
-        ef.Add(_client);
-        ef.Add(_product);
-        ef.Add(_order);
-        ef.Add(_delivery);
+        ef.Add(_product); ;
         ef.SaveChanges();
-        _client = new Client();
         _product = new Product();
-        _order = new Order();
-        _delivery = new Delivery();
     }
 }

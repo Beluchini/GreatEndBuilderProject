@@ -18,4 +18,7 @@ public class RecordOfProduct
     
     public int DeliveryId { get; set; }
     [ForeignKey("DeliveryId")] public Delivery Delivery { get; set; }
+    
+    public int CategoryId { get; set; }
+    [ForeignKey("CategoryId")] public Category Category { get; set; }
 }
