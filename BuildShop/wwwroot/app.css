@@ -53,47 +53,52 @@ h1:focus {
 .CatalogHead {
     margin-left: 50px;
     height: 155px;
-    width: 89%;
+    width: 95%;
     background-color: #ededed;
-    border-radius: 25px;
+    border-radius: 10px;
 
 }
 .DP1 {
     display: flex;
 }
 .Name {
-    height: 130px;
+    height: 125px;
     width: 150px;
     background-color: red;
-    border-radius: 25px;
+    border-radius: 10px;
     margin-top: 10px;
     margin-left: 30px;
     text-align: center;
     padding-top: 5px;
     font-size: 25px;
-    color: white;
+    color: white !important;
     text-decoration: none;
     border: 1px solid black;
+    font-family: sans-serif;
+}
+.Div {
+    margin-top: -28px;
 }
 .Catalog {
     height: 60px;
     width: 150px;
     background-color: #7c7c7c;
-    border-radius: 25px;
+    border-radius: 10px;
     margin-top: 10px;
     margin-left: 30px;
     text-align: center;
     padding-top: 11px;
     font-size: 25px;
-    color: white;
+    color: white !important;
     text-decoration: none;
     border: 1px solid black;
+    font-family: sans-serif;
 }
 .Quest {
     height: 60px;
     width: 1000px;
     background-color: white;
-    border-radius: 25px;
+    border-radius: 10px;
     margin-top: 10px;
     margin-left: 30px;
     padding-left: 10px;
@@ -101,6 +106,7 @@ h1:focus {
     text-align: left;
     font-size: 40px;
     color: #000000;
+    font-family: sans-serif;
 }
 .Categories {
     margin-top: 20px;
@@ -113,11 +119,13 @@ h1:focus {
     margin: 5px;
     background-color: red;
     color: white;
-    border-radius: 25px;
+    border-radius: 10px;
     padding-top: 8px;
     padding-left: 5px;
     padding-right: 5px;
     border: 1px solid black;
+    font-family: sans-serif;
+    font-weight: bolder;
 }
 .AllProducts {
     margin-top: 20px;
@@ -125,28 +133,30 @@ h1:focus {
     width: 1280px;
     margin-left: 250px;
     background-color: #ededed;
-    border-radius: 25px;
+    border-radius: 10px;
 }
 .Products {
     background-color: snow;
     margin: 10px;
     min-height: 480px;
     width: 300px;
-    border-radius: 25px;
+    border-radius: 10px;
     border: 1px solid black;
     
 }
 .Imag {
-    border-radius: 25px;
-    margin: 10px;
+    border-radius: 10px;
+    margin: 14px;
     height: 270px;
     width: 270px;
     border: 1px solid #dfdfdf;
 }
 .Text {
+    font-weight: bold;
     margin: 10px;
-    height: 70px;
-    width: 250px;
+    height: 65px;
+    width: 270px;
+    font-family: sans-serif;
 }
 .parent {
     display: flex;
@@ -154,33 +164,37 @@ h1:focus {
     flex-wrap: wrap;
 }
 .Categ {
-    margin: 10px;
-    height: 30px;
+    margin-left: 10px;
+    height: 10px;
     width: 250px;
+    font-family: sans-serif;
 }
 .Price {
-    font-size: 30px;
-    margin: 10px;
-    height: 30px;
+    font-size: 20px;
+    margin-left: 10px;
+    height: 10px;
     width: 250px;
+    font-family: sans-serif;
 }
 .Buy {
     background-color: #ff0000;
     text-align: center;
     padding-top: 7px;
-    border-radius: 25px;
+    border-radius: 10px;
     margin-left: 30px;
     margin-bottom: 10px;
     height: 40px;
     width: 240px;
     text-decoration: none;
-    color: white;
+    color: white !important;
     border: 1px solid black;
+    font-family: sans-serif;
 }
 .Cound {
-    margin: 10px;
-    height: 20px;
+    margin-left: 10px;
+    height: 10px;
     width: 250px;
+    font-family: sans-serif;
 }
 .Down {
     align-content: center;
@@ -193,10 +207,17 @@ h1:focus {
     margin-left: 280px;
 }
 .Reference {
-    color: white;
+    color: white !important;
     text-decoration: none;
 }
 .BackRef {
     color: black;
     text-decoration: none;
+    
+}
+.HomeImage {
+    margin-top: -9px;
+    margin-left: 5px;
+    height: 100%;
+    width: 90%;
 }

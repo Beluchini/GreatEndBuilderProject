@@ -7,7 +7,12 @@
 <div class="CatalogHead">
     <div class=DP1>
         <div class="DP1">
-            <a href="https://localhost:44304/" class="Name">СтройДом</a>
+            <a href="https://localhost:44304/" class="Name">
+                <div class="HomeImage">
+                    <img class="HomeImage" src="Frame 1.png"/>
+                </div>
+                <p class="Div">СтройДом</p>
+                </a>
             <div>
                 <div class="DP1">
                     <a href="https://localhost:44304/" class="Catalog">Каталог</a>
@@ -48,10 +53,10 @@
             {
                 <div class="Products">
                     <img class="Imag" src="@item.Style">
-                    <p class="Price"> @item.Price рублей</p>
-                    <p class="Cound">за @item.Count упаковку</p>
                     <p class="Text">@item.Title</p>
                     <p class="Categ">@item.Kind</p>
+                    <p class="Price"> @item.Price рублей</p>
+                    <p class="Cound">за @item.Count упаковку</p>
                     <a class="Buy" href="https://localhost:44304/delivery" type="submit">Купить</a>
                 </div>
             }
