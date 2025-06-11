@@ -267,17 +267,104 @@ h1:focus {
     border-radius: 10px;
 }
 .BuyHead {
-    justify-content: center;
     margin-top: 20px;
-    margin-left: 400px;
+    margin-left: 600px;
     height: 100%;
-    width: 55%;
+    width: 31%;
     background-color: #ededed;
     border-radius: 10px;
     padding: 20px;
 }
 .Card {
+    padding-left: 10px;
+    padding-right: 10px;
+    align-content: center;
     background-color: white;
+    height: 170px;
+    width: 263px;
     border-radius: 25px;
     border: 1px solid black;
+}
+.CardName {
+    padding-left: 5px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: #ededed;
+    height: 40px;
+    width: 230px;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+.CvC {
+    padding-left: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    height: 40px;
+    width: 112px;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: #ededed;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+.ForCard {
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-content: center;
+    background-color: white;
+    height: 120px;
+    width: 263px;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+.ForOrder {
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-content: center;
+    background-color: white;
+    height: 300px;
+    width: 263px;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+.ForOrderName {
+    margin-top: 4px;
+    padding-left: 5px;
+    margin-bottom: 4px;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: #ededed;
+    height: 40px;
+    width: 230px;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+.ForBuy {
+    margin-top: 4px;
+    padding-left: 5px;
+    margin-bottom: 4px;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: #fd0000;
+    color: white;
+    height: 40px;
+    width: 230px;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+.Great {
+    text-align: center;
+    align-content: center;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: #fd0000;
+    height: 50px;
+    width: 525px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
 }

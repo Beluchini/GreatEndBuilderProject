@@ -34,36 +34,35 @@
 </div>
 <div class="BuyHead">
     <div>
-        <h1>Отлично, теперь к оплате</h1>
+        <h1 class="Great">Отлично, теперь к оплате</h1>
     </div>
     <div class="DP1">
-        <div class="card">
-            <p>Введите фамилию</p>
-            <input placeholder="Иванов" type="text"/>
-            <p>Введите имя</p>
-            <input placeholder="Иван" type="text"/>
-            <p>Введите отчество</p>
-            <input placeholder="Иванович" type="text"/>
-            <div class="parent">
-                <input type="text" placeholder="Введите номер карты"/>
-                <input type="text" placeholder="CVC/CVV"/>
-                <input type="text" placeholder="00/00"/>
+        <div class="DP2">
+            <div class="Card">
+                <input class="CardName" placeholder="Иванов" type="text"/>
+                <input class="CardName" placeholder="Иван" type="text"/>
+                <input class="CardName" placeholder="Иванович" type="text"/>
             </div>
+            <div class="ForCard">
+                <div class="DP2">
+                    <input class="CardName" type="text" placeholder="Введите номер карты"/>
+                    <div class="DP1">
+                        <input class="CvC" type="text" placeholder="CVC/CVV"/>
+                        <input class="CvC" type="text" placeholder="00/00"/>
+                    </div>
+                </div>
+            </div>
+            
         </div>
-        <div>
+        <div class="ForOrder">
             <EditForm FormName="formAddItem" Model="_client" OnValidSubmit="@Submit">
                 <DataAnnotationsValidator></DataAnnotationsValidator>
-                <p>Введите NickName</p>
-                <input type="text" @bind="_client.NickName"/>
-                <p>Введите Email</p>
-                <input type="text" @bind="_client.Email"/>
-                <p>Введите страну доставки</p>
-                <input type="text" @bind="_order.Country"/>
-                <p>Введите город доставки</p>
-                <input type="text" @bind="_order.City"/>
-                <p>Введите адресс доставки</p>
-                <input type="text" @bind="_order.Addres"/>
-                <button type="submit">Заказать</button>
+                <input class="ForOrderName" placeholder="Введите NickName" type="text" @bind="_client.NickName"/>
+                <input class="ForOrderName" placeholder="Введите Email" type="text" @bind="_client.Email"/>
+                <input class="ForOrderName" placeholder="Введите страну доставки" type="text" @bind="_order.Country"/>
+                <input class="ForOrderName" placeholder="Введите город доставки" type="text" @bind="_order.City"/>
+                <input class="ForOrderName" placeholder="Введите адрес доставки" type="text" @bind="_order.Addres"/>
+                <button class="ForBuy" type="submit">Заказать</button>
             </EditForm>
         </div>
     </div>
