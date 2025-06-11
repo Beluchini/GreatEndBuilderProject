@@ -51,7 +51,111 @@ h1:focus {
 }
 
 .CatalogHead {
-    height: 40px;
+    height: 180px;
     width: 100%;
-    color: red;
+    background-color: #ededed;
+    border-radius: 25px;
+
+}
+.DP1 {
+    display: flex;
+}
+.Name {
+    height: 160px;
+    width: 150px;
+    background-color: red;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-left: 30px;
+    text-align: center;
+    padding-top: 17px;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+.Catalog {
+    height: 60px;
+    width: 150px;
+    background-color: #7c7c7c;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-left: 30px;
+    text-align: center;
+    padding-top: 11px;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+.Quest {
+    height: 60px;
+    width: 1000px;
+    background-color: white;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-left: 30px;
+    padding-left: 10px;
+    padding-bottom: 6px;
+    text-align: left;
+    font-size: 40px;
+    color: #000000;
+}
+.AllProducts {
+    margin-top: 20px;
+    height: 100%;
+    width: 1530px;
+    margin-left: 120px;
+    background-color: #ededed;
+    border-radius: 25px;
+}
+.Products {
+    background-color: snow;
+    border-color: black;
+    margin: 10px;
+    min-height: 480px;
+    width: 300px;
+    border-radius: 25px;
+    
+}
+.Imag {
+    margin: 10px;
+    height: 250px;
+    width: 250px;
+}
+.Text {
+    margin: 10px;
+    height: 70px;
+    width: 250px;
+}
+.parent {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.Categ {
+    margin: 10px;
+    height: 30px;
+    width: 250px;
+}
+.Price {
+    font-size: 30px;
+    margin: 10px;
+    height: 30px;
+    width: 250px;
+}
+.Buy {
+    background-color: #ff0000;
+    text-align: center;
+    padding-top: 7px;
+    border-radius: 25px;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    height: 40px;
+    width: 240px;
+    text-decoration: none;
+    color: white;
+}
+.Cound {
+    margin: 10px;
+    height: 20px;
+    width: 250px;
 }

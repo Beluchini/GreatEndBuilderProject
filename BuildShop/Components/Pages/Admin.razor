@@ -15,7 +15,7 @@
     <p>Введите ссылку на изображение товара</p>
     <input type="text" @bind="_product.Style"/>
     <p>Определите тип товара</p>
-    <input @bind="_recordOfProduct.Products.Basket" />
+    <!--<input @bind="_recordOfProduct.Products.Basket" /-->
     <select @bind="_product.Kind">
         @foreach (var item in ef.Categories.ToList())
         {

@@ -5,18 +5,29 @@
 @inject BuildContext ef
 <PageTitle>Home</PageTitle>
 <div class="CatalogHead">
-    
-</div>
-@foreach (var item in ef.Products.ToList())
-{ 
-    <div>
-            <img src="@item.Style">
-            <p>@item.Title</p>
-            <p>@item.Kind</p>
-            <p>@item.Price рублей за @item.Count упаковку</p>
-            <button type="submit">Купить</button>
+    <div class="DP1">
+        <a href="https://localhost:44304/" class="Name">СтройДом</a>
+        <a href="https://localhost:44304/" class="Catalog">Каталог</a>
+        <input class="Quest" type="text"/>
     </div>
-}
+</div>
+<div class="AllProducts">
+    <div class="parent">
+        <div class="parent">
+            @foreach (var item in ef.Products.ToList())
+            {
+                <div class="Products">
+                    <img class="Imag" src="@item.Style">
+                    <p class="Price"> @item.Price рублей</p>
+                    <p class="Cound">за @item.Count упаковку</p>
+                    <p class="Text">@item.Title</p>
+                    <p class="Categ">@item.Kind</p>
+                    <a class="Buy" href="https://localhost:44304/delivery" type="submit">Купить</a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
 
 @code
 {
