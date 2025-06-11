@@ -1,17 +1,31 @@
 ﻿@page "/"
 @using BuildShop.Database
+@using BuildShop.Model
 @rendermode InteractiveServer
 @inject BuildContext ef
-
 <PageTitle>Home</PageTitle>
-
-<h1>Hello, world!</h1>
-
-<div>
-    @foreach (var item in ef.Products.ToList())
-    {
-        <img src="@item.Style">
-        <p>@item.Title</p>
-        <p>@item.Price за @item.Count шт.</p>
-    }
+<div class="CatalogHead">
+    
 </div>
+@foreach (var item in ef.Products.ToList())
+{ 
+    <div>
+            <img src="@item.Style">
+            <p>@item.Title</p>
+            <p>@item.Kind</p>
+            <p>@item.Price рублей за @item.Count упаковку</p>
+            <button type="submit">Купить</button>
+    </div>
+}
+
+@code
+{
+    private Product _product = new Product();
+    
+  /*  private async Task Shop()
+    {
+        ef.Update(_product);
+        await ef.SaveChangesAsync();
+        StateHasChanged();
+    } */
+} 

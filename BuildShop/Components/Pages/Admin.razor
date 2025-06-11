@@ -15,7 +15,8 @@
     <p>Введите ссылку на изображение товара</p>
     <input type="text" @bind="_product.Style"/>
     <p>Определите тип товара</p>
-    <select>
+    <input @bind="_recordOfProduct.Products.Basket" />
+    <select @bind="_product.Kind">
         @foreach (var item in ef.Categories.ToList())
         {
             <option>@item.Type</option>
@@ -26,6 +27,7 @@
 
 @code {
     private Product _product = new Product();
+    private RecordOfProduct _recordOfProduct = new RecordOfProduct();
 
     private void Submit(EditContext arg)
     {
