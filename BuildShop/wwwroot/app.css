@@ -51,8 +51,9 @@ h1:focus {
 }
 
 .CatalogHead {
-    height: 180px;
-    width: 100%;
+    margin-left: 50px;
+    height: 155px;
+    width: 89%;
     background-color: #ededed;
     border-radius: 25px;
 
@@ -61,17 +62,18 @@ h1:focus {
     display: flex;
 }
 .Name {
-    height: 160px;
+    height: 130px;
     width: 150px;
     background-color: red;
     border-radius: 25px;
     margin-top: 10px;
     margin-left: 30px;
     text-align: center;
-    padding-top: 17px;
+    padding-top: 5px;
     font-size: 25px;
     color: white;
     text-decoration: none;
+    border: 1px solid black;
 }
 .Catalog {
     height: 60px;
@@ -85,6 +87,7 @@ h1:focus {
     font-size: 25px;
     color: white;
     text-decoration: none;
+    border: 1px solid black;
 }
 .Quest {
     height: 60px;
@@ -99,27 +102,46 @@ h1:focus {
     font-size: 40px;
     color: #000000;
 }
+.Categories {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.Type {
+    text-align: center;
+    align-content: center;
+    height: 40px;
+    margin: 5px;
+    background-color: red;
+    color: white;
+    border-radius: 25px;
+    padding-top: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid black;
+}
 .AllProducts {
     margin-top: 20px;
     height: 100%;
-    width: 1530px;
-    margin-left: 120px;
+    width: 1280px;
+    margin-left: 250px;
     background-color: #ededed;
     border-radius: 25px;
 }
 .Products {
     background-color: snow;
-    border-color: black;
     margin: 10px;
     min-height: 480px;
     width: 300px;
     border-radius: 25px;
+    border: 1px solid black;
     
 }
 .Imag {
+    border-radius: 25px;
     margin: 10px;
-    height: 250px;
-    width: 250px;
+    height: 270px;
+    width: 270px;
+    border: 1px solid #dfdfdf;
 }
 .Text {
     margin: 10px;
@@ -148,14 +170,33 @@ h1:focus {
     padding-top: 7px;
     border-radius: 25px;
     margin-left: 30px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     height: 40px;
     width: 240px;
     text-decoration: none;
     color: white;
+    border: 1px solid black;
 }
 .Cound {
     margin: 10px;
     height: 20px;
     width: 250px;
+}
+.Down {
+    align-content: center;
+    color: white;
+    background-color: #2c2c2c;
+    width: 100%;
+    height: 300px;
+}
+.About {
+    margin-left: 280px;
+}
+.Reference {
+    color: white;
+    text-decoration: none;
+}
+.BackRef {
+    color: black;
+    text-decoration: none;
 }

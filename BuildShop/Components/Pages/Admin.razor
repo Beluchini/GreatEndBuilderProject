@@ -15,7 +15,6 @@
     <p>Введите ссылку на изображение товара</p>
     <input type="text" @bind="_product.Style"/>
     <p>Определите тип товара</p>
-    <!--<input @bind="_recordOfProduct.Products.Basket" /-->
     <select @bind="_product.Kind">
         <option>Выберите категорию</option>
         @foreach (var item in ef.Categories.ToList())
@@ -25,7 +24,12 @@
     </select>
     <button type="submit">Добавить продукт</button>
 </EditForm>
-
+<div>
+    <a class="BackRef" href="https://localhost:44304/">Вернуться в каталог</a>
+</div>
+<div>
+    <a class="BackRef" href="https://localhost:44304/adminType">Добавить категорию</a>
+</div>
 @code {
     private Product _product = new Product();
     private RecordOfProduct _recordOfProduct = new RecordOfProduct();
