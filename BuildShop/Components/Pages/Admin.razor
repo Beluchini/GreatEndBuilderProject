@@ -17,6 +17,7 @@
     <p>Определите тип товара</p>
     <!--<input @bind="_recordOfProduct.Products.Basket" /-->
     <select @bind="_product.Kind">
+        <option>Выберите категорию</option>
         @foreach (var item in ef.Categories.ToList())
         {
             <option>@item.Type</option>
