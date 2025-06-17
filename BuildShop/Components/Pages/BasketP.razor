@@ -3,7 +3,11 @@
 @using BuildShop.Model
 @inject BuildContext ef
 @rendermode InteractiveServer
-<h1>Корзина</h1>
+<h1>В разработке...</h1>
+<a style="color: black; text-decoration: none" href="https://localhost:7283/">
+    <h3>Вернуться в каталог</h3>
+</a>
+<!--Короче я пытался, может потом до ума доведу
 
 <div>
     @foreach (var item in ef.Products.ToList())
@@ -19,31 +23,67 @@
     </EditForm>
     }
 </div>
-@foreach (var item in ef.Baskets.ToList())
-{
+<EditForm FormName="formAddItem" Model="_basket" OnValidSubmit="@Save">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    @foreach (var item in ef.Baskets.ToList())
+    {
     <p>@item.BasketStyle</p>
     <p>@item.BasketTittle</p>
     <p>@item.BasketKind</p>
     <p>@item.BasketPrice</p>
     <p>@item.BasketCount</p>
+    <button type="submit">Сохранить</button>
+    }
+</EditForm>-->
+@foreach (var item in ef.Baskets.ToList())
+{
+    <div class="DP2">
+        <div class="BasketTable">
+            <div class="parent">
+                <div>
+                    <img class="BasketImage" src="@item.BasketStyle"/>
+                </div>
+                <div>
+                    <p>@item.BasketTittle</p>
+                    <p>@item.BasketKind</p>
+                    <p>@item.BasketPrice</p>
+                    <p>@item.BasketCount</p>
+                </div>
+            </div>
+        </div>
+    </div>
 }
 @code {
     private Basket _basket = new Basket();
-
+    private bool ShowModal { get; set; }
     
     private void Submit(EditContext arg)
     {
-        foreach (var item in ef.Products.ToList())
-        {
-            _basket.BasketStyle = item.Style;
-            _basket.BasketTittle = item.Title;
-            _basket.BasketCount = item.Count;
-            _basket.BasketKind = item.Kind;
-            _basket.BasketPrice = item.Price;
-        }
         ef.Add(_basket);
         ef.SaveChanges();
         _basket = new Basket();
     }
+    
+    /* private void ViewModal()
+    {
+        ShowModal = true;
+    }
 
+    private void CloseModal()
+    {
+        ShowModal = false;
+    }
+
+    private async Task Save()
+    {
+        ef.Update(_basket);
+        await ef.SaveChangesAsync();
+    }
+    
+    private async Task DeleteFromBasket()
+    {
+        ef.Remove(_basket);
+        await ef.SaveChangesAsync();
+        await InvokeAsync(StateHasChanged);
+    } */
 }

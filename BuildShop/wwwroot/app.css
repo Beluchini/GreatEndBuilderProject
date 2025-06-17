@@ -52,7 +52,7 @@ h1:focus {
 
 .CatalogHead {
     margin-left: 50px;
-    height: 155px;
+    height: 175px;
     width: 95%;
     background-color: #ededed;
     border-radius: 10px;
@@ -60,6 +60,8 @@ h1:focus {
 }
 .DP1 {
     display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 .Name {
     height: 125px;
@@ -99,6 +101,7 @@ h1:focus {
     width: 1000px;
     background-color: white;
     border-radius: 10px;
+    padding-top: 5px;
     margin-top: 10px;
     margin-left: 30px;
     padding-left: 10px;
@@ -109,6 +112,7 @@ h1:focus {
     font-family: sans-serif;
 }
 .Categories {
+    width: 800px;
     margin-top: 20px;
     margin-left: 20px;
 }
@@ -372,4 +376,17 @@ h1:focus {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
+}
+.BasketTable {
+    height: 220px;
+    width: 1000px;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #e1e1e1;
+    margin-bottom: 10px;
+}
+.BasketImage {
+    height: 200px;
+    width: 200px;
+    border-radius: 25px;
 }
