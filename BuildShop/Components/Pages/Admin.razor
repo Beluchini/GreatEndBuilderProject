@@ -30,6 +30,23 @@
 <div>
     <a class="BackRef" href="https://localhost:7283/adminType">Добавить категорию</a>
 </div>
+<div style="margin-left: 0px" class="AllProducts">
+    <div class="parent">
+        <div class="parent">
+            @foreach (var item in ef.Products.ToList())
+            {
+            <div class="Products">
+                <img class="Imag" src="@item.Style">
+                <p class="Text">@item.Title</p>
+                <p class="Categ">@item.Kind</p>
+                <p class="Price"> @item.Price рублей</p>
+                <p class="Cound">за @item.Count упаковку</p>
+                <a class="Buy" href="https://localhost:7283/deliverey" type="submit">Купить</a>
+            </div>
+            }
+        </div>
+    </div>
+</div>
 @code {
     private Product _product = new Product();
 

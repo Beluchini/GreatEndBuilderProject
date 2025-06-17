@@ -17,6 +17,10 @@
 <div>
     <a class="BackRef" href="https://localhost:7283/admin">Админка</a>
 </div>
+@foreach (var item in ef.Categories.ToList())
+{
+    <p>@item.Id @item.Type</p>
+}
 @code {
     private Category _category = new Category();
 

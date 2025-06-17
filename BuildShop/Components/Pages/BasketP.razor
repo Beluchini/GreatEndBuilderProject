@@ -1,0 +1,49 @@
+@page "/BasketP"
+@using BuildShop.Database
+@using BuildShop.Model
+@inject BuildContext ef
+@rendermode InteractiveServer
+<h1>Корзина</h1>
+
+<div>
+    @foreach (var item in ef.Products.ToList())
+    {
+    <EditForm FormName="formAddItem" Model="_basket" OnValidSubmit="@Submit">
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+        <div>@item.Style</div>
+        <div>@item.Title</div>
+        <div>@item.Kind</div>
+        <div>@item.Price</div>
+        <div>@item.Count</div>
+        <button type="submit">Добавить в корзину</button>
+    </EditForm>
+    }
+</div>
+@foreach (var item in ef.Baskets.ToList())
+{
+    <p>@item.BasketStyle</p>
+    <p>@item.BasketTittle</p>
+    <p>@item.BasketKind</p>
+    <p>@item.BasketPrice</p>
+    <p>@item.BasketCount</p>
+}
+@code {
+    private Basket _basket = new Basket();
+
+    
+    private void Submit(EditContext arg)
+    {
+        foreach (var item in ef.Products.ToList())
+        {
+            _basket.BasketStyle = item.Style;
+            _basket.BasketTittle = item.Title;
+            _basket.BasketCount = item.Count;
+            _basket.BasketKind = item.Kind;
+            _basket.BasketPrice = item.Price;
+        }
+        ef.Add(_basket);
+        ef.SaveChanges();
+        _basket = new Basket();
+    }
+
+}

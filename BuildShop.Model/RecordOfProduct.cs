@@ -21,4 +21,7 @@ public class RecordOfProduct
     
     public int CategoryId { get; set; }
     [ForeignKey("CategoryId")] public Category Category { get; set; }
+    
+    public int BasketId { get; set; }
+    [ForeignKey("BasketId")] public Basket Baskets { get; set; }
 }
