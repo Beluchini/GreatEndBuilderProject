@@ -88,3 +88,13 @@
         </div>
     </div>
 </div>
+@code
+{
+    private Basket _basket = new Basket();
+    private Product _product;
+
+    private void Cheked()
+    {
+        var first = ef.Products.FirstOrDefault(s => s.Id == 5);
+    }
+}

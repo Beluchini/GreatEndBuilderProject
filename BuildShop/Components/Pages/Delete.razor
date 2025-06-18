@@ -1,0 +1,51 @@
+@page "/Delete"
+@using BuildShop.Database
+@using BuildShop.Model
+@rendermode InteractiveServer
+@inject BuildContext ef
+<h3>Delete</h3>
+<div class="DP1">
+    @foreach (var item in ef.Products.ToList())
+    {
+    <div class="Products @(item.Id == _basket.Id ? "selected-product" : "")">
+        <img class="Imag" src="@item.Style">
+        <p class="Text">@item.Title</p>
+        <p class="Categ">@item.Kind</p>
+        <p class="Price">@item.Price рублей</p>
+        <p class="Cound">за @item.Count упаковку</p>
+        <button class="Buy" @onclick="() => AddToBasket(item.Id)">Купить</button>
+    </div>
+    }
+</div>
+@if (_selectedProduct != null)
+{
+    <div class="selected-product-details">
+        <h3>Выбранный товар:</h3>
+        <div class="Products">
+            <img class="Imag" src="@_selectedProduct.Style">
+            <p class="Text">@_selectedProduct.Title</p>
+            <p class="Categ">@_selectedProduct.Kind</p>
+            <p class="Price">@_selectedProduct.Price рублей</p>
+            <p class="Cound">за @_selectedProduct.Count упаковку</p>
+            <a class="Buy" href="/deliverey">Оформить заказ</a>
+        </div>
+    </div>
+}
+
+@code {
+    private Product _selectedProduct;
+    private Basket _basket = new Basket();
+    
+    private void AddToBasket(int productId)
+    {
+        _selectedProduct = ef.Products.FirstOrDefault(p => p.Id == productId);
+        _basket.Id = productId;
+        _basket.BasketStyle = _selectedProduct.Style;
+        _basket.BasketTittle = _selectedProduct.Title;
+        _basket.BasketPrice = _selectedProduct.Price;
+        _basket.BasketCount = _selectedProduct.Count;
+        _basket.BasketKind = _selectedProduct.Kind;
+        ef.Add(_basket);
+        ef.SaveChanges();
+    }
+}
