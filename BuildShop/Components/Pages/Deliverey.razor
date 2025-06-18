@@ -3,7 +3,7 @@
 @using BuildShop.Model
 @rendermode InteractiveServer
 @inject BuildContext ef
-<div class="CatalogHead2">
+<div style="margin-left: 300px" class="CatalogHead2">
     <div class=DP1>
         <div style="display: flex; flex-direction: row">
             <a href="https://localhost:7283/" class="Name">
@@ -39,16 +39,16 @@
     <div style="display: flex; flex-direction: row; margin-top: 10px">
         <div class="DP2">
             <div class="Card">
-                <input class="CardName" placeholder="Иванов" type="text"/>
-                <input class="CardName" placeholder="Иван" type="text"/>
-                <input class="CardName" placeholder="Иванович" type="text"/>
+                <input class="CardName" @bind="_client.Name" placeholder="Иванов" type="text"/>
+                <input class="CardName" @bind="_client.FirstName" placeholder="Иван" type="text"/>
+                <input class="CardName" @bind="_client.LastName" placeholder="Иванович" type="text"/>
             </div>
             <div class="ForCard">
                 <div class="DP2">
-                    <input class="CardName" type="text" placeholder="Введите номер карты"/>
+                    <input class="CardName" @bind="_client.Card" type="text" placeholder="Введите номер карты"/>
                     <div class="DP1">
-                        <input class="CvC" type="text" placeholder="CVC/CVV"/>
-                        <input class="CvC" type="text" placeholder="00/00"/>
+                        <input class="CvC" @bind="_client.Code" type="text" placeholder="CVC/CVV"/>
+                        <input class="CvC" @bind="_client.DateCard" type="text" placeholder="00/00"/>
                     </div>
                 </div>
             </div>

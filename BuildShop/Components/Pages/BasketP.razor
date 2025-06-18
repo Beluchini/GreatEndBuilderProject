@@ -15,7 +15,10 @@
         <p class="Categ">@item.BasketKind</p>
         <p class="Price">@item.BasketPrice рублей</p>
         <p class="Cound">за @item.BasketCount упаковку</p>
-        <button class="Buy" @onclick="() => DeleteFromBasket(item)">Купить</button>
+        <div class="DP2">
+            <button class="Buy" @onclick="() => DeleteFromBasket(item)">Удалить из корзины</button>
+            <a class="Buy" href="https://localhost:7283/Deliverey">Купить</a>
+        </div>
     </div>
     }
 </div>

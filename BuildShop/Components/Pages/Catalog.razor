@@ -16,7 +16,7 @@
             <div>
                 <div class="DP1">
                     <a href="https://localhost:7283/" class="Catalog">Каталог</a>
-                    <input class="Quest" type="text"/>
+                    <input placeholder="По приколу, не ищите здесь ничего" class="Quest" type="text"/>
                     <a href="https://localhost:7283/BasketP" class="Catalog">Корзина</a>
                 </div>
                 <div>
@@ -57,7 +57,7 @@
                 <p class="Categ">@item.Kind</p>
                 <p class="Price">@item.Price рублей</p>
                 <p class="Cound">за @item.Count упаковку</p>
-                <button class="Buy" @onclick="() => AddToBasket(item.Id)">Купить</button>
+                <button class="Buy" @onclick="() => AddToBasket(item.Id)">Добавить в корзину</button>
             </div>
             }
         </div>
