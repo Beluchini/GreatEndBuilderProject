@@ -229,6 +229,10 @@ h1:focus {
     display: flex;
     flex-direction: column;
 }
+.DP3 {
+    display: flex;
+    flex-direction: row;
+}
 .Catalog2 {
     height: 60px;
     width: 150px;
@@ -260,13 +264,14 @@ h1:focus {
     font-weight: bolder;
 }
 .Categories2 {
+    width: 400px;
     margin-top: 5px;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 .CatalogHead2 {
-    margin-left: 400px;
+    margin-left: 1000px;
     height: 155px;
-    width: 55%;
+    width: 1200px;
     background-color: #ededed;
     border-radius: 10px;
 }

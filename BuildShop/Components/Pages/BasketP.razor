@@ -7,9 +7,9 @@
 <a style="color: black; text-decoration: none" href="https://localhost:7283/">
     <h3>Вернуться в каталог</h3>
 </a>
-<!--Короче я пытался, может потом до ума доведу
+Короче я пытался, может потом до ума доведу
 
-<div>
+<!--<div>
     @foreach (var item in ef.Products.ToList())
     {
     <EditForm FormName="formAddItem" Model="_basket" OnValidSubmit="@Submit">
@@ -25,7 +25,7 @@
 </div>
 <EditForm FormName="formAddItem" Model="_basket" OnValidSubmit="@Save">
     <DataAnnotationsValidator></DataAnnotationsValidator>
-    @foreach (var item in ef.Baskets.ToList())
+    @foreach (var item in ef.Baskets)
     {
     <p>@item.BasketStyle</p>
     <p>@item.BasketTittle</p>
@@ -35,7 +35,7 @@
     <button type="submit">Сохранить</button>
     }
 </EditForm>-->
-@foreach (var item in ef.Baskets.ToList())
+@foreach (var item in ef.Baskets)
 {
     <div class="DP2">
         <div class="BasketTable">
@@ -63,6 +63,11 @@
         ef.SaveChanges();
         _basket = new Basket();
     }
+
+    private async Task Addmit(EditContext arg)
+    {
+        
+    } 
     
     /* private void ViewModal()
     {

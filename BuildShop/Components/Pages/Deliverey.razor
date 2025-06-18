@@ -5,20 +5,20 @@
 @inject BuildContext ef
 <div class="CatalogHead2">
     <div class=DP1>
-        <div class="DP1">
+        <div style="display: flex; flex-direction: row">
             <a href="https://localhost:7283/" class="Name">
                 <div class="HomeImage">
                     <img class="HomeImage" src="Frame 1.png"/>
                 </div>
                 <p class="Div">СтройДом</p>
             </a>
-            <div class="DP1">
-                <div class="DP2">
+            <div style="display: flex; flex-direction: row">
+                <div style="width: 200px" class="DP2">
                     <a href="https://localhost:7283/" class="Catalog2">Каталог</a>
-                    <a href="https://localhost:7283/error" class="Catalog">Корзина</a>
+                    <a href="https://localhost:7283/error" class="Catalog2">Корзина</a>
                 </div>
-                <div class="Categories2">
-                    <div class="parent">
+                <div style="width: 620px; margin-left: 1px" class="Categories2">
+                    <div  class="parent">
                         @foreach (var item in ef.Categories.ToList())
                         {
                             <div class="Type2">
@@ -32,11 +32,11 @@
         </div>
     </div>
 </div>
-<div class="BuyHead">
+<div style="margin-top: 50px" class="BuyHead">
     <div>
         <h1 class="Great">Отлично, теперь к оплате</h1>
     </div>
-    <div class="DP1">
+    <div style="display: flex; flex-direction: row; margin-top: 10px">
         <div class="DP2">
             <div class="Card">
                 <input class="CardName" placeholder="Иванов" type="text"/>
@@ -67,7 +67,7 @@
         </div>
     </div>
 </div>
-<div style="margin-top: 100px" class="Down">
+<div style="margin-top: 100px; margin-left: -35px; width: 110%; padding-left: 100px" class="Down">
     <div class="parent">
         <div class="About">
             <h3>О компании</h3>
