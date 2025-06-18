@@ -57,6 +57,7 @@
                     <p class="Categ">@item.Kind</p>
                     <p class="Price"> @item.Price рублей</p>
                     <p class="Cound">за @item.Count упаковку</p>
+                    <button class="Buy" onclick="@(() => AddProduct(item))">Добавить в корзуну</button>
                     <a class="Buy" href="https://localhost:7283/deliverey" type="submit">Купить</a>
                 </div>
             }
@@ -96,5 +97,20 @@
     private void Cheked()
     {
         var first = ef.Products.FirstOrDefault(s => s.Id == 5);
+    }
+    private void AddProduct(Product current)
+    {
+        _basket = new Basket()
+        {
+            BasketCount = current.Count, 
+            BasketKind = current.Kind, 
+            BasketPrice = current.Price, 
+            BasketStyle = current.Style, 
+            BasketTittle = current.Title
+
+        };
+
+        ef.Baskets.Add(_basket);
+        ef.SaveChanges();
     }
 }

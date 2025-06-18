@@ -2,6 +2,7 @@
 @using BuildShop.Database
 @using BuildShop.Model
 @inject BuildContext ef
+@inject NavigationManager nm
 @rendermode InteractiveServer
 <h1>В разработке...</h1>
 <a style="color: black; text-decoration: none" href="https://localhost:7283/">
@@ -50,13 +51,14 @@
                     <p>@item.BasketCount</p>
                 </div>
             </div>
+            <button onclick="@(() => DeleteBasket(item))">Удалить</button>
         </div>
     </div>
 }
 @code {
     private Basket _basket = new Basket();
     private bool ShowModal { get; set; }
-    
+
     private void Submit(EditContext arg)
     {
         ef.Add(_basket);
@@ -66,9 +68,17 @@
 
     private async Task Addmit(EditContext arg)
     {
-        
-    } 
-    
+
+    }
+
+    private void DeleteBasket(Basket basket)
+    {
+        ef.Baskets.Remove(basket);
+        ef.SaveChanges();
+
+        nm.NavigateTo("BasketP", true);
+    }
+
     /* private void ViewModal()
     {
         ShowModal = true;
