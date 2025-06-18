@@ -3,3 +3,12 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+.vs/BuildShop/FileContentIndex/e16d4311-6c9b-41ba-a716-c6cf3c10a9d1.vsidx
+.vs/
+bin/
+obj/
+*.user
+artifacts/
+.vscode/
+.dotnet/
+*.binlog
