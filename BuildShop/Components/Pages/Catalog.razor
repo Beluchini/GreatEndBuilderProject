@@ -48,17 +48,17 @@
 </div>
 <div style="margin-top: 10px; margin-bottom: 20px" class="AllProducts">
     <div class="parent">
-        <div class="parent">
+        <div class="DP1">
             @foreach (var item in ef.Products.ToList())
             {
-                <div class="Products">
-                    <img class="Imag" src="@item.Style">
-                    <p class="Text">@item.Title</p>
-                    <p class="Categ">@item.Kind</p>
-                    <p class="Price"> @item.Price рублей</p>
-                    <p class="Cound">за @item.Count упаковку</p>
-                    <a class="Buy" href="https://localhost:7283/deliverey" type="submit">Купить</a>
-                </div>
+            <div class="Products @(item.Id == _basket.Id ? "selected-product" : "")">
+                <img class="Imag" src="@item.Style">
+                <p class="Text">@item.Title</p>
+                <p class="Categ">@item.Kind</p>
+                <p class="Price">@item.Price рублей</p>
+                <p class="Cound">за @item.Count упаковку</p>
+                <button class="Buy" @onclick="() => AddToBasket(item.Id)">Купить</button>
+            </div>
             }
         </div>
     </div>
@@ -90,11 +90,21 @@
 </div>
 @code
 {
-    private Basket _basket = new Basket();
     private Product _product;
 
-    private void Cheked()
+    private Product _selectedProduct;
+    private Basket _basket = new Basket();
+    
+    private void AddToBasket(int productId)
     {
-        var first = ef.Products.FirstOrDefault(s => s.Id == 5);
+        _selectedProduct = ef.Products.FirstOrDefault(p => p.Id == productId);
+        _basket.Id = productId;
+        _basket.BasketStyle = _selectedProduct.Style;
+        _basket.BasketTittle = _selectedProduct.Title;
+        _basket.BasketPrice = _selectedProduct.Price;
+        _basket.BasketCount = _selectedProduct.Count;
+        _basket.BasketKind = _selectedProduct.Kind;
+        ef.Add(_basket);
+        ef.SaveChanges();
     }
 }
